@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import Form from './Form';
 
-import uuid from 'uuid';
+import Forms from './Form';
+
+
 
 function App() {
   return (
     <div className="App">
-
+      <Forms />
     </div>
   );
 }
