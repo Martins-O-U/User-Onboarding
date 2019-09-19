@@ -1,14 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import UserForm from './Form';
+import UsersList from './UsersList';
 
-import Forms from './Form';
 
+const initialFriendForm = {
+  name: '',
+  email: '',
+  password: '',
+  city: '',
+};
 
 
 function App() {
+  const [userList, setUserList] = useState([]);
+  const [serverError, setServerError] = useState('');
+
   return (
     <div className="App">
-      <Forms />
+      <UserForm setUsers={setUserList} users={userList} />
+      <UsersList users={userList} />
     </div>
   );
 }
